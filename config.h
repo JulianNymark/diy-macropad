@@ -8,8 +8,8 @@ const char keyMap[13] = {
   'g',
   'h',
   'i',
-  'j',
-  'k',
-  'l',
+  'j', // analog
+  'k', // analog
+  'l', // analog
   'm'
 };

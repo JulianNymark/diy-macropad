@@ -26,7 +26,7 @@ void loop() {
   digitalPins();
   analogSignal();
   triggerConfigKeys();
-  delay(20);
+//  delay(10);
 }
 
 int lastKeyState[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -60,13 +60,13 @@ void digitalPins() {
 // magic numbers for analog value thresholds found through trial and error
 void analogSignal() {
   sensorValue = analogRead(sensorPin);
-  //  Serial.println(sensorValue);/
+//  Serial.println(sensorValue);
 
   if (sensorValue < 1750) {
     keyState[10] = 0;
     keyState[9] = 0;
     keyState[8] = 0;
-  } else if (sensorValue < 2055) {
+  } else if (sensorValue < 2000) {
     keyState[10] = 1;
     keyState[9] = 0;
     keyState[8] = 0;
