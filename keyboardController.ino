@@ -18,11 +18,10 @@ void setup() {
   pinMode(D8, INPUT);
   pinMode(D9, INPUT);
   pinMode(D10, INPUT);
-  Serial.begin(9600);
+  Keyboard.begin();
 }
 
 void loop() {
-  Keyboard.begin();
   digitalPins();
   analogSignal();
   triggerConfigKeys();
@@ -60,7 +59,6 @@ void digitalPins() {
 // magic numbers for analog value thresholds found through trial and error
 void analogSignal() {
   sensorValue = analogRead(sensorPin);
-//  Serial.println(sensorValue);
 
   if (sensorValue < 1750) {
     keyState[10] = 0;
